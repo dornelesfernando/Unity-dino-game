@@ -601,7 +601,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3babcb556aeed440a5ef9b91a057e9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cactoPrefab: {fileID: 2316073805434581142, guid: c8ff4ce05c7deab48bfa79deb9c3f116, type: 3}
+  cactoPrefabs:
+  - {fileID: 0}
+  - {fileID: 0}
   delayInicial: 2
   delayEntreCactos: 4
 --- !u!4 &1681165844
