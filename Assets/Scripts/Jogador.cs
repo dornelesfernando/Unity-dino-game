@@ -20,7 +20,7 @@ public class Jogador : MonoBehaviour
     {
         pontos += Time.deltaTime * multiplicadorPontos;
 
-        pontosText.text = "Pontos: " + Mathf.FloorToInt(pontos).ToString();
+        pontosText.text = $"Pontos: {Mathf.FloorToInt(pontos)}";
 
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
