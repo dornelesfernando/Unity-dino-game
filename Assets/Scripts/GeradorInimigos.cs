@@ -15,8 +15,8 @@ public class GeradorInimigos : MonoBehaviour
     public Jogador jogadorScript;
     public float delayInicial;
     public float delayEntreCactos;
-    public float distanciaMinima = 4;
-    public float distancaiMaxima = 8;
+    public float distanciaMinima = 10;
+    public float distancaiMaxima = 20;
     // Start is called before the first frame update
     private void Start()
     {
@@ -37,10 +37,6 @@ public class GeradorInimigos : MonoBehaviour
         {
             var geracaoObjetoLiberada = ultimoInimigoGerado == null
              || UnityEngine.Vector3.Distance(transform.position, ultimoInimigoGerado.transform.position) >= distanciaNecessaria;
-
-            print(distanciaNecessaria);
-
-            if (ultimoInimigoGerado != null) print(UnityEngine.Vector3.Distance(transform.position, ultimoInimigoGerado.transform.position));
 
             if (geracaoObjetoLiberada)
             {

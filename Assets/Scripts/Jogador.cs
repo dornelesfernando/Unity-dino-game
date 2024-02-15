@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Jogador : MonoBehaviour
@@ -20,6 +19,7 @@ public class Jogador : MonoBehaviour
     public AudioSource pularAudioSource;
     public AudioSource oneHundredPointsAudioSource;
     public AudioSource deathAudioSource;
+    public GameObject reiniciarButton;
     private void Start()
     {
         highscore = PlayerPrefs.GetFloat("HIGHSCORE");
@@ -82,7 +82,9 @@ public class Jogador : MonoBehaviour
             }
             deathAudioSource.Play();
 
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            reiniciarButton.SetActive(true);
+
+            Time.timeScale = 0;
         }
 
     }
