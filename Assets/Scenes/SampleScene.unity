@@ -1461,10 +1461,14 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   minAlturaChao: 0.5
+  pontos: 0
   multiplicadorPontos: 12
   pontosText: {fileID: 1441799823}
   highscoreText: {fileID: 1112071710}
   animatorComponent: {fileID: 1445035518}
+  pularAudioSource: {fileID: 17972318}
+  oneHundredPointsAudioSource: {fileID: 678169958}
+  deathAudioSource: {fileID: 134206041}
 --- !u!95 &1445035518
 Animator:
   serializedVersion: 5
@@ -1497,7 +1501,7 @@ GameObject:
   - component: {fileID: 1681165844}
   - component: {fileID: 1681165843}
   m_Layer: 0
-  m_Name: GeradorCacto
+  m_Name: GeradorInimigos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1518,6 +1522,11 @@ MonoBehaviour:
   cactoPrefabs:
   - {fileID: 6508616709339885271, guid: 6d7311904ec440240bca2b6f8d17c10c, type: 3}
   - {fileID: 6508616709339885271, guid: d24b379a484df104096a34a7755ffc91, type: 3}
+  dinossauroVoadorPrefab: {fileID: 2316073805434581142, guid: d5851e550a072994a8ecaddb4a51833b, type: 3}
+  dinossauroVoadorYMinimo: 0
+  dinossauroVoadorYMaximo: 2
+  pontuacaoDinossaroVoadorMinima: 300
+  jogadorScript: {fileID: 1445035517}
   delayInicial: 0
   delayEntreCactos: 2
 --- !u!4 &1681165844
