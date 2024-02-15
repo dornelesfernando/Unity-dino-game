@@ -14,6 +14,7 @@ public class Jogador : MonoBehaviour
     private float pontos;
     public float multiplicadorPontos = 1;
     public Text pontosText;
+    public Animator animatorComponent;
 
     // Update is called once per frame
     void Update()
@@ -26,6 +27,15 @@ public class Jogador : MonoBehaviour
         {
             Pular();
         }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Agaixar();
+        }
+        else if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            Levantar();
+        }
     }
 
     void Pular()
@@ -34,6 +44,16 @@ public class Jogador : MonoBehaviour
         {
             rb.AddForce(Vector2.up * forcaPulo);
         }
+    }
+
+    private void Agaixar()
+    {
+        animatorComponent.SetBool("Agaixado", true);
+    }
+
+    private void Levantar()
+    {
+        animatorComponent.SetBool("Agaixado", false);
     }
 
     private void FixedUpdate()
