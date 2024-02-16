@@ -1649,6 +1649,7 @@ MonoBehaviour:
   oneHundredPointsAudioSource: {fileID: 678169958}
   deathAudioSource: {fileID: 134206041}
   reiniciarButton: {fileID: 1672877404}
+  jogoScript: {fileID: 500707255}
 --- !u!95 &1445035518
 Animator:
   serializedVersion: 5
@@ -1914,6 +1915,8 @@ MonoBehaviour:
   cactoPrefabs:
   - {fileID: 6508616709339885271, guid: 6d7311904ec440240bca2b6f8d17c10c, type: 3}
   - {fileID: 6508616709339885271, guid: d24b379a484df104096a34a7755ffc91, type: 3}
+  - {fileID: 6508616709339885271, guid: 7fcaa5ba87691df45a0d861601d4173d, type: 3}
+  - {fileID: 6508616709339885271, guid: 82c4ee297e6d23f43b98fd89137e537e, type: 3}
   dinossauroVoadorPrefab: {fileID: 2316073805434581142, guid: d5851e550a072994a8ecaddb4a51833b, type: 3}
   dinossauroVoadorYMinimo: 0
   dinossauroVoadorYMaximo: 2
