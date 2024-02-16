@@ -7,7 +7,7 @@ public class Jogo : MonoBehaviour
 {
     public float modificadorVelocidade = 1f;
     public float velocidade = 4.5f;
-    public float velocidadeMaxima = 10f;
+    public float velocidadeMaxima = 50f;
 
     private void Update()
     {

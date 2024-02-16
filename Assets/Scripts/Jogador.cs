@@ -20,6 +20,8 @@ public class Jogador : MonoBehaviour
     public AudioSource oneHundredPointsAudioSource;
     public AudioSource deathAudioSource;
     public GameObject reiniciarButton;
+    public Jogo jogoScript;
+    private bool death = false;
     private void Start()
     {
         highscore = PlayerPrefs.GetFloat("HIGHSCORE");
@@ -40,10 +42,17 @@ public class Jogador : MonoBehaviour
         {
             oneHundredPointsAudioSource.Play();
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow)) Pular();
+        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.W))
+        {
+            Pular();
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) Agaixar();
+        else if (Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.S)) Levantar();
 
-        if (Input.GetKeyDown(KeyCode.DownArrow)) Agaixar();
-        else if (Input.GetKeyUp(KeyCode.DownArrow)) Levantar();
+        if (Input.GetKeyDown(KeyCode.Space) && death || Input.GetKeyDown(KeyCode.Return) && death)
+        {
+            jogoScript.ReiniciarJogo();
+        }
     }
 
     void Pular()
@@ -74,6 +83,8 @@ public class Jogador : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Inimigo"))
         {
+            death = true;
+
             if (highscore < pontos)
             {
                 highscore = pontos;
